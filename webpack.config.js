@@ -17,7 +17,26 @@ if (env === 'build') {
 }
 
 const config = {
-    entry: ['./src/index.js'],
+    entry: {
+        'bundle.js': [
+            path.resolve(__dirname, 'src/index.js'),
+            path.resolve(__dirname, 'src/order-view/OrderView.js'),
+            path.resolve(__dirname, 'src/order-view/Translate.js'),
+            path.resolve(__dirname, 'src/order-view/Utils.js'),
+            path.resolve(__dirname, 'src/order-view/services/User.js'),
+            path.resolve(__dirname, 'src/order-view/services/TimeLine.js'),
+            path.resolve(__dirname, 'src/order-view/services/Table.js'),
+            path.resolve(__dirname, 'src/order-view/services/Segmentations.js'),
+            path.resolve(__dirname, 'src/order-view/services/Promotions.js'),
+            path.resolve(__dirname, 'src/order-view/services/Payments.js'),
+            path.resolve(__dirname, 'src/order-view/services/Oth.js'),
+            path.resolve(__dirname, 'src/order-view/services/Items.js'),
+            path.resolve(__dirname, 'src/order-view/services/Histories.js'),
+            path.resolve(__dirname, 'src/order-view/services/Dishes.js'),
+            path.resolve(__dirname, 'src/order-view/services/Discounts.js'),
+            path.resolve(__dirname, 'src/order-view/services/Courses.js'),
+        ]
+    },
     output: {
         path: path.resolve(__dirname , outPutDirectory),
         filename: outputFile

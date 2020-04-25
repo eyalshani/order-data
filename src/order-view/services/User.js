@@ -1,10 +1,10 @@
-const UserService = (function () {
+window.OrderDataLib.UserService = (function () {
 
     let utils;
 
     function UserService(options) {
 
-        utils = new Utils();
+        utils = new window.OrderDataLib.Utils();
 
     }
 

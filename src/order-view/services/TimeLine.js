@@ -1,5 +1,5 @@
 
-const TimeLineService = (function () {
+window.OrderDataLib.TimeLineService = (function () {
 
     let utils;
     let translateService;
@@ -26,31 +26,31 @@ const TimeLineService = (function () {
 
     function TimeLineService(options) {
 
-        utils = new Utils();
+        utils = new window.OrderDataLib.Utils();
 
-        translateService = new TranslateService({
+        translateService = new window.OrderDataLib.TranslateService({
             local: options.local
         });
 
-        paymentsService = new PaymentsService({
+        paymentsService = new window.OrderDataLib.PaymentsService({
             local: options.local
         });
 
-        userService = new UserService();
+        userService = new window.OrderDataLib.UserService();
 
-        othService = new OthService({
+        othService = new window.OrderDataLib.OthService({
             local: options.local
         });
 
-        discountsService = new DiscountsService({
+        discountsService = new window.OrderDataLib.DiscountsService({
             local: options.local
         });
 
-        segmentationsService = new SegmentationsService({
+        segmentationsService = new window.OrderDataLib.SegmentationsService({
             local: options.local
         });
 
-        historiesService = new HistoriesService({
+        historiesService = new window.OrderDataLib.HistoriesService({
             local: options.local
         });
 

@@ -1,10 +1,10 @@
-const PromotionsService = (function () {
+window.OrderDataLib.PromotionsService = (function () {
 
     let utils;
 
     function PromotionsService(options) {
 
-        utils = new Utils();
+        utils = new window.OrderDataLib.Utils();
 
     }
 

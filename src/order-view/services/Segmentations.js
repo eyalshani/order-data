@@ -1,15 +1,15 @@
-const SegmentationsService = (function () {
+window.OrderDataLib.SegmentationsService = (function () {
 
     let translateService;
     let userService;
 
     function SegmentationsService(options) {
 
-        translateService = new TranslateService({
+        translateService = new window.OrderDataLib.TranslateService({
             local: options.local
         });
 
-        userService = new UserService();
+        userService = new window.OrderDataLib.UserService();
     }
 
     function resolveSegmentationsTimeLine(order, options) {

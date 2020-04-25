@@ -1,4 +1,4 @@
-const TableService = (function () {
+window.OrderDataLib.TableService = (function () {
 
     let translateService;
 
@@ -12,7 +12,7 @@ const TableService = (function () {
 
     function TableService(options) {
 
-        translateService = new TranslateService({
+        translateService = new window.OrderDataLib.TranslateService({
             local: options.local
         });
 

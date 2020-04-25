@@ -1,4 +1,4 @@
-let Utils = (function () {
+window.OrderDataLib.Utils = (function () {
 
   function Utils() {
 

@@ -1,4 +1,4 @@
-const CoursesService = (function () {
+window.OrderDataLib.CoursesService = (function () {
 
     let userService;
 
@@ -12,7 +12,7 @@ const CoursesService = (function () {
 
     function CoursesService() {
 
-        userService = new UserService();
+        userService = new window.OrderDataLib.UserService();
 
     }
 

@@ -1,5 +1,5 @@
 
-let TranslateService = (function () {
+window.OrderDataLib.TranslateService = (function () {
 
     function TranslateService(options) {
         _configure(options)

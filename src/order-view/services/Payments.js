@@ -1,4 +1,4 @@
-const PaymentsService = (function () {
+window.OrderDataLib.PaymentsService = (function () {
 
     let translateService;
     let userService;
@@ -23,13 +23,13 @@ const PaymentsService = (function () {
 
     function PaymentsService(options) {
 
-        utils = new Utils();
+        utils = new window.OrderDataLib.Utils();
 
-        translateService = new TranslateService({
+        translateService = new window.OrderDataLib.TranslateService({
             local: options.local
         });
 
-        userService = new UserService();
+        userService = new window.OrderDataLib.UserService();
 
     }
 

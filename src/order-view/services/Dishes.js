@@ -1,5 +1,5 @@
 
-const DishesService = (function () {
+window.OrderDataLib.DishesService = (function () {
 
 
     function DishesService(options) {

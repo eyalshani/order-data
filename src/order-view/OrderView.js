@@ -1,6 +1,5 @@
 
-
-const OrderViewService = (function () {
+window.OrderDataLib.OrderViewService = (function () {
 
   function OrderViewService(options) {
     _configure(options);
@@ -37,41 +36,41 @@ const OrderViewService = (function () {
       moment = window.moment;
     }
 
-    translateService = new TranslateService({
+    translateService = new window.OrderDataLib.TranslateService({
       local: _options.local
     });
 
-    utils = new Utils();
+    utils = new window.OrderDataLib.Utils();
 
-    discountsService = new DiscountsService({
+    discountsService = new window.OrderDataLib.DiscountsService({
       local: _options.local
     });
 
-    promotionsService = new PromotionsService();
+    promotionsService = new window.OrderDataLib.PromotionsService();
 
-    timeLineService = new TimeLineService({
+    timeLineService = new window.OrderDataLib.TimeLineService({
       local: _options.local
     });
 
-    userService = new UserService();
+    userService = new window.OrderDataLib.UserService();
 
-    othService = new OthService({
+    othService = new window.OrderDataLib.OthService({
       local: _options.local
     });
 
-    tableService = new TableService({
+    tableService = new window.OrderDataLib.TableService({
       local: _options.local
     });
 
-    paymentsService = new PaymentsService({
+    paymentsService = new window.OrderDataLib.PaymentsService({
       local: _options.local
     });
 
-    coursesService = new CoursesService();
+    coursesService = new window.OrderDataLib.CoursesService();
 
-    dishesService = new DishesService();
+    dishesService = new window.OrderDataLib.DishesService();
 
-    itemsService = new ItemsService({
+    itemsService = new window.OrderDataLib.ItemsService({
       local: _options.local
     });
   }

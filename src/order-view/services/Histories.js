@@ -1,5 +1,5 @@
 
-const HistoriesService = (function () {
+window.OrderDataLib.HistoriesService = (function () {
 
     let translateService;
     let userService;
@@ -55,11 +55,11 @@ const HistoriesService = (function () {
 
     function HistoriesService(options) {
 
-        translateService = new TranslateService({
+        translateService = new window.OrderDataLib.TranslateService({
             local: options.local
         });
 
-        userService = new UserService();
+        userService = new window.OrderDataLib.UserService();
 
     }
 

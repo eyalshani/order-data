@@ -1,5 +1,5 @@
 
-const ItemsService = (function () {
+window.OrderDataLib.ItemsService = (function () {
 
     let userService;
     let translateService;
@@ -14,9 +14,9 @@ const ItemsService = (function () {
 
     function ItemsService(options) {
 
-        userService = new UserService();
+        userService = new window.OrderDataLib.UserService();
 
-        translateService = new TranslateService({
+        translateService = new window.OrderDataLib.TranslateService({
             local: options.local
         });
 
