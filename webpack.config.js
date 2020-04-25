@@ -3,6 +3,7 @@
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path');
+const outPutDirectory = 'dist';
 const webpack = require('webpack');
 const env = require('yargs').argv.env; // use --env with webpack 2
 let libraryName = 'order-data';
@@ -18,7 +19,7 @@ if (env === 'build') {
 const config = {
     entry: ['./src/index.js'],
     output: {
-        path: path.resolve(__dirname , 'build'),
+        path: path.resolve(__dirname , outPutDirectory),
         filename: outputFile
     },
     mode: 'development',
@@ -39,7 +40,7 @@ const config = {
     },
     devServer:{
         port: 3000,
-        contentBase: __dirname + '/build',
+        contentBase: __dirname + '/' + outPutDirectory,
         inline: true
     },
     optimization:{
