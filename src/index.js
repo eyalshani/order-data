@@ -1,7 +1,7 @@
 
 window.OrderDataLib = class OrderDataLib {
     constructor(options = undefined) {
-        console.log('order-data library version:');
+        console.log('order-data library version : ' + VERSION);
         if(options === undefined) {
             console.log('no option data was supplied to order-data library');
         } else {

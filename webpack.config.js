@@ -1,9 +1,27 @@
+
+/* global __dirname, require, module*/
+
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const env = require('yargs').argv.env; // use --env with webpack 2
+let libraryName = 'order-data';
+
+let outputFile = '';
+
+if (env === 'build') {
+    outputFile = libraryName + '.min.js';
+} else {
+    outputFile = libraryName + '.js';
+}
+
 const config = {
     entry: ['./src/index.js'],
     output: {
-        path: __dirname + '/build',
-        filename: 'order-data.js'
+        path: path.resolve(__dirname , 'build'),
+        filename: outputFile
     },
+    mode: 'development',
     module: {
         rules : [
             {
@@ -23,6 +41,16 @@ const config = {
         port: 3000,
         contentBase: __dirname + '/build',
         inline: true
-    }
+    },
+    optimization:{
+        minimizer: [new UglifyJsPlugin()]
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            VERSION: JSON.stringify(require('./package.json').version)
+        })
+    ]
 }
 module.exports = config;
+
+
